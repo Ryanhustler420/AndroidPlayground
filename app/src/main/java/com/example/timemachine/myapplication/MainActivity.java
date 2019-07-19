@@ -15,22 +15,16 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        index = findViewById(R.id.index);
-        index.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "index button");
-            }
-        });
-
-        marketplace = findViewById(R.id.marketPlace);
-        marketplace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "marketplace button");
-            }
-        });
     }
 
+    public void performAction(View view) {
+        switch (view.getId()){
+            case R.id.index:
+                Log.i(TAG, "Index Button");
+                break;
+            case R.id.marketPlace:
+                Log.i(TAG, "Marketplace Button");
+                break;
+        }
+    }
 }
