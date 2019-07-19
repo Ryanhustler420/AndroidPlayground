@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Project One</string>
+    <string name="index">#Index</string>
+    <string name="marketplace">Marketplace</string>
 </resources>
