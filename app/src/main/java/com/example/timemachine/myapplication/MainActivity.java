@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.i(TAG, "First Method Worked");
                     Intent i = new Intent(MainActivity.this, Main2Activity.class);
                     startActivity(i);
+                    Toast toast = Toast.makeText(MainActivity.this, "Moving to Main2Activity", Toast.LENGTH_SHORT);
+                    toast.show();
                 break;
             case R.id.m2:
                     Log.i(TAG, "Second Method Worked");
