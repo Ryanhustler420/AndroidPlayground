@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent i = new Intent(MainActivity.this, Main2Activity.class);
                     startActivity(i);
                     Toast toast = Toast.makeText(MainActivity.this, "Moving to Main2Activity", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER,0,0);
+                    // toast.setGravity(Gravity.TOP | Gravity.RIGHT,0,0);
                     toast.show();
                 break;
             case R.id.m2:
