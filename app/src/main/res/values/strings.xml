@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">Project One</string>
-    <string name="secondActivityM1">Move to second Activity</string>
-    <string name="secondActivityM2">Move to second Activity</string>
-    <string name="secondActivityM3">Move to second Activity</string>
+    <string name="CustomToast">Custom Toast</string>
 </resources>
