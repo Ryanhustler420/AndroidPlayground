@@ -50,7 +50,6 @@
         android:hint="@string/enterNumber"
         android:inputType="number"
         android:labelFor="@+id/increment"
-        android:text="@string/enterNumber"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/increment"
         app:layout_constraintEnd_toEndOf="parent"
