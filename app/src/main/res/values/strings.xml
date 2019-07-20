@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Project One</string>
-    <string name="CustomToast">Custom Toast</string>
+    <string name="CustomToast">Click Me</string>
 </resources>
