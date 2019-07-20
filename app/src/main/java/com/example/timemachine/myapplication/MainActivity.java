@@ -10,15 +10,25 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        score = 0;
     }
 
     public void performAction(View view) {
-
+        // Code goes here....
+        switch (view.getId()) {
+            case R.id.increment:
+                score += 1;
+                break;
+            case R.id.showCount:
+                Toast.makeText(getApplicationContext(), "Your SCORE is " + score, Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 
     @Override
