@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Project One</string>
-    <string name="incressCount">Increment Counter</string>
-    <string name="ShowCount">Show Count Value</string>
-    <string name="enterNumber">Enter Number</string>
+    <string name="app_name">Java Interview</string>
+    <string name="simple">Simple Questions</string>
+    <string name="tough">Tough Questions</string>
+    <string name="other">See our Other Apps</string>
+    <string name="rate">Rate App</string>
+    <string name="creator">Creator Image</string>
+    <string name="heading">Java Interview Questions</string>
 </resources>
