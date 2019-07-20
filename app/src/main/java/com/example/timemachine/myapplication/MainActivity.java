@@ -1,8 +1,10 @@
 package com.example.timemachine.myapplication;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,5 +18,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void performAction(View view) {
 
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Toast.makeText(getApplicationContext(), "Portrait Mode", Toast.LENGTH_SHORT);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(getApplicationContext(), "Landscape Mode", Toast.LENGTH_SHORT);
+        }
     }
 }
