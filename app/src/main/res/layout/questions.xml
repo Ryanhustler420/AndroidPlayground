@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -17,9 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="XX/"
+            android:text="@string/tv_xx"
             android:textColor="@android:color/white"
             android:textSize="30sp" />
 
@@ -28,8 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="YY"
+            android:text="@string/tv_yy"
             android:textColor="@android:color/white"
             android:textSize="30sp" />
     </LinearLayout>
@@ -45,16 +43,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="What is Java ?"
+            android:text="@string/tv_question"
             android:textColor="@android:color/white" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -62,7 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="15dp"
-                    android:text="Press A Button for answer"
+                    android:text="@string/tv_showanswer"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </ScrollView>
@@ -73,31 +71,39 @@
         android:layout_height="0dp"
         android:layout_weight="12"
         android:gravity="center|center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle">
 
         <Button
             android:id="@+id/bprev"
-            android:layout_width="50dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/black"
-            android:text="Prev" />
+            android:text="@string/bprev"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/bshowanswer"
-            android:layout_width="50dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_green_dark"
-            android:text=" Show Answer" />
+            android:text="@string/bshow"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/bnext"
-            android:layout_width="50dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/black"
             android:hapticFeedbackEnabled="false"
-            android:text="Next" />
+            android:text="@string/bnext"
+            android:textColor="@android:color/white"
+            android:textColorLink="@android:color/white" />
     </LinearLayout>
 </LinearLayout>

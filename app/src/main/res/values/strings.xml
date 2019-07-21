@@ -6,4 +6,11 @@
     <string name="rate">Rate App</string>
     <string name="creator">Creator Image</string>
     <string name="heading">Java Interview Questions</string>
+    <string name="tv_xx">XX / </string>
+    <string name="tv_yy"> YY</string>
+    <string name="tv_question"> What is Java ?</string>
+    <string name="tv_showanswer"> Press Answer Button for answer.</string>
+    <string name="bprev"> Prev</string>
+    <string name="bshow"> Show Answer</string>
+    <string name="bnext"> Next</string>
 </resources>
