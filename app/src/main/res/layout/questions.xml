@@ -3,6 +3,7 @@
     android:id="@+id/questions_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     android:orientation="vertical"
     android:weightSum="100">
 
@@ -89,9 +90,9 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/answer_btn"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:background="@drawable/answer_btn"
             android:text="@string/bshow"
             android:textColor="@android:color/white" />
 
