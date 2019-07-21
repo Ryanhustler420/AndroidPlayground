@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tough_questions">
+        <item>How do I uninstall apps or games on Android device?</item>
+        <item>How do I add a new email account on Android device?</item>
+        <item>Where do I get android apps for my smart phone?</item>
+        <item>Can I Write code for android using C/C++ ?</item>
+    </string-array>
+</resources>

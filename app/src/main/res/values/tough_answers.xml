@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tough_answers">
+        <item>This method works for all versions of Android. The first thing you should do is open the Settings menu on your device. After that, open Apps or Application manager (depending on your device), find the app you want to delete and select it, and then just tap on the Uninstall button.</item>
+        <item>
+            1. Open the Gmail app and navigate to the Settings section. \n
+            2. Tap Add account. \n
+            3. Tap Personal (IMAP/POP) and then Next. \n
+            4. Enter your full email address and tap Next. \n
+            5. Choose the type of email account you will be using. \n
+                POP3 will download the emails from the server and store them on your phone.
+                IMAP will store the emails on the server and show a cached copy on your phone. IMAP is best in most cases.
+                Exchange is not supported because it requires a Microsoft Exchange server
+            6. Enter the password for your email address and tap Next.
+        </item>
+        <item>You can download any app for your phone form google play store. for premium or free as well.</item>
+        <item>Yes because, The NDK is a toolset that enables the development of Android apps using C, C++ and other native code languages, compiling code into applications that can run on Android devices. Using the NDK is generally not recommended because apps may experience a performance hit, suffer from compatibility issues, be harder to debug, and reduce flexibility. What the NDK guarantees is an increase in app complexity and connectivity from interfacing with native code.</item>
+    </string-array>
+</resources>

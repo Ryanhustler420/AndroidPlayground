@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_Questions">
+        <item>What is Android?</item>
+        <item>What is the Google Android SDK?</item>
+        <item>What is the Android Framework?</item>
+        <item>Describe Activities.</item>
+        <item>What are Intents?</item>
+    </string-array>
+</resources>

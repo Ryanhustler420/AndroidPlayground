@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_answers">
+        <item>It is an open-source operating system that is used primarily on mobile devices.</item>
+        <item>The Google Android SDK is a toolset that developers need in order to write apps on Android enabled devices.</item>
+        <item>The Android Framework is an important aspect of the android Architecture.</item>
+        <item>Activities are what you refer to as the window to a user interface. actually to which user interact with.</item>
+        <item>Intents help to move across the activities window and can help to pass data back and forth.</item>
+    </string-array>
+</resources>
