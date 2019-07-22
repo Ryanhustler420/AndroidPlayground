@@ -6,6 +6,7 @@ public class Simple_question extends QuestionAnswerStore implements QuestionAnsw
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // change action bar later
         this.init();
     }
 
