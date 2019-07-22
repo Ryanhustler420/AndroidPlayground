@@ -7,7 +7,6 @@ public class Tough_question extends QuestionAnswerStore implements QuestionAnswe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // change action bar later
         this.init();
     }
 

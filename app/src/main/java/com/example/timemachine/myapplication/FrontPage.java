@@ -1,9 +1,9 @@
 package com.example.timemachine.myapplication;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,13 +12,17 @@ public class FrontPage extends AppCompatActivity implements View.OnClickListener
 
     Button bSimple, bTough, bcoa, brate;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.front_page);
 
-        // change action bar later
+        // Codes to add Action Bar [ inflating layout ]
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setCustomView(R.layout.frontpage_title_bar);
 
         bSimple = findViewById(R.id.bsq);
         bTough = findViewById(R.id.btq);
