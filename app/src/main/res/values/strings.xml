@@ -13,4 +13,5 @@
     <string name="bprev"> Prev</string>
     <string name="bshow"> Show Answer</string>
     <string name="bnext"> Next</string>
+    <string name="category_question"> Category Question</string>
 </resources>
