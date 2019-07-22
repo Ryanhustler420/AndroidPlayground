@@ -12,6 +12,7 @@ public class Tough_question extends AppCompatActivity implements View.OnClickLis
 
     Button bprev, bshow, bnext;
 
+    int index;
     String[] toughQuestions, toughAnswers;
 
     @Override
@@ -32,6 +33,13 @@ public class Tough_question extends AppCompatActivity implements View.OnClickLis
         bshow.setOnClickListener(this);
         bnext.setOnClickListener(this);
 
+        // init first question
+        tvQuestion.setText(toughQuestions[index]);
+        tvAnswer.setText("Press \"A\" Button for the Answer");
+        tvPresentIndex_xx.setText(String.valueOf(index+1));
+        tvTotalLength__yy.setText("/ "+String.valueOf(toughQuestions.length));
+        index = 0;
+
         toughQuestions = getResources().getStringArray(R.array.tough_questions);
         toughAnswers = getResources().getStringArray(R.array.tough_answers);
     }
@@ -40,13 +48,21 @@ public class Tough_question extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bprev:
-
+                tvAnswer.setText("Press \"A\" Button for the Answer");
+                index--;
+                if(index == -1) index = toughQuestions.length - 1;
+                tvQuestion.setText(toughQuestions[index]);
+                tvPresentIndex_xx.setText(String.valueOf(index+1));
                 break;
             case R.id.bshowanswer:
-
+                tvAnswer.setText(toughAnswers[index]);
                 break;
             case R.id.bnext:
-
+                tvAnswer.setText("Press \"A\" Button for the Answer");
+                index++;
+                if(index == toughQuestions.length) index = 0;
+                tvQuestion.setText(toughQuestions[index]);
+                tvPresentIndex_xx.setText(String.valueOf(index+1));
                 break;
         }
     }

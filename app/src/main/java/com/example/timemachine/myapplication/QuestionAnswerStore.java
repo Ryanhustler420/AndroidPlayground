@@ -1,13 +1,12 @@
 package com.example.timemachine.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Arrays;
 
-public class QuestionAnswerStore extends AppCompatActivity implements View.OnClickListener {
+public class QuestionAnswerStore extends AppCompatActivity {
     TextView tvQuestion, tvAnswer, tvTotalLength__yy, tvPresentIndex_xx;
     String[] allQuestions, allAnswers;
 
@@ -15,7 +14,7 @@ public class QuestionAnswerStore extends AppCompatActivity implements View.OnCli
 
     int index;
 
-    public QuestionAnswerStore QuestionAnswerStore(String[] questions, String[] answers) {
+    QuestionAnswerStore(String[] questions, String[] answers) {
         tvQuestion = findViewById(R.id.tvquestion);
         tvAnswer = findViewById(R.id.tvanswer);
         tvPresentIndex_xx = findViewById(R.id.tvxx);
@@ -24,10 +23,6 @@ public class QuestionAnswerStore extends AppCompatActivity implements View.OnCli
         bprev = findViewById(R.id.bprev);
         bshow = findViewById(R.id.bshowanswer);
         bnext = findViewById(R.id.bnext);
-
-        bprev.setOnClickListener(this);
-        bshow.setOnClickListener(this);
-        bnext.setOnClickListener(this);
 
         allQuestions = questions.clone();
         allAnswers = Arrays.copyOf(answers, answers.length);
@@ -38,25 +33,25 @@ public class QuestionAnswerStore extends AppCompatActivity implements View.OnCli
         tvPresentIndex_xx.setText(String.valueOf(index+1));
         tvTotalLength__yy.setText(String.valueOf(allQuestions.length));
         index = 0;
-
-        return this;
     }
 
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bprev:
-
-                break;
-            case R.id.bshowanswer:
-
-                break;
-            case R.id.bnext:
-
-                break;
-        }
+    public void prevQuestion() {
+        tvAnswer.setText("Press \"A\" Button for the Answer");
+        index--;
+        if(index == -1) index = allQuestions.length - 1;
+        tvQuestion.setText(allQuestions[index]);
+        tvPresentIndex_xx.setText(String.valueOf(index+1));
     }
 
-    // methods for incress decres
+    public void nextQuestion() {
+        tvAnswer.setText("Press \"A\" Button for the Answer");
+        index++;
+        if(index == allQuestions.length) index = 0;
+        tvQuestion.setText(allQuestions[index]);
+        tvPresentIndex_xx.setText(String.valueOf(index+1));
+    }
+
+    public void setAnswer() {
+        tvAnswer.setText(allAnswers[index]);
+    }
 }

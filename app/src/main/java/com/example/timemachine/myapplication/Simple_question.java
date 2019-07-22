@@ -32,29 +32,36 @@ public class Simple_question extends AppCompatActivity implements View.OnClickLi
         bprev.setOnClickListener(this);
         bshow.setOnClickListener(this);
         bnext.setOnClickListener(this);
+        simpleQuestions = getResources().getStringArray(R.array.simple_Questions);
+        simpleAnswers = getResources().getStringArray(R.array.simple_answers);
 
         // init first question
         tvQuestion.setText(simpleQuestions[index]);
         tvAnswer.setText("Press \"A\" Button for the Answer");
         tvPresentIndex_xx.setText(String.valueOf(index+1));
-        tvTotalLength__yy.setText(String.valueOf(simpleQuestions.length));
+        tvTotalLength__yy.setText("/ "+String.valueOf(simpleQuestions.length));
         index = 0;
-
-        simpleQuestions = getResources().getStringArray(R.array.simple_Questions);
-        simpleAnswers = getResources().getStringArray(R.array.simple_answers);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bprev:
-
+                tvAnswer.setText("Press \"A\" Button for the Answer");
+                index--;
+                if(index == -1) index = simpleQuestions.length - 1;
+                tvQuestion.setText(simpleQuestions[index]);
+                tvPresentIndex_xx.setText(String.valueOf(index+1));
                 break;
             case R.id.bshowanswer:
-
+                tvAnswer.setText(simpleAnswers[index]);
                 break;
             case R.id.bnext:
-
+                tvAnswer.setText("Press \"A\" Button for the Answer");
+                index++;
+                if(index == simpleQuestions.length) index = 0;
+                tvQuestion.setText(simpleQuestions[index]);
+                tvPresentIndex_xx.setText(String.valueOf(index+1));
                 break;
         }
     }
