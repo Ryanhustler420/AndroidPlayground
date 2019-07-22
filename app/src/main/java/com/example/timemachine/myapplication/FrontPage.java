@@ -1,6 +1,8 @@
 package com.example.timemachine.myapplication;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.ActionBar;
@@ -49,6 +51,18 @@ public class FrontPage extends AppCompatActivity implements View.OnClickListener
             case R.id.coa:
                 break;
             case R.id.rate:
+                Uri uri;
+
+                try {
+                // redirect to google play store
+                    uri = Uri.parse("market://details?id=" + getPackageName());
+                } catch (ActivityNotFoundException e) {
+                //  if play store is not available on the mobile, than  this link will automatically redirect to default web browser
+                    uri = Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName());
+                }
+
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(goToMarket);
                 break;
         }
     }
