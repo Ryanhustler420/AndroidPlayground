@@ -49,6 +49,18 @@ public class FrontPage extends AppCompatActivity implements View.OnClickListener
                 startActivity(tough);
                 break;
             case R.id.coa:
+                Uri uri_coa;
+
+                try {
+                    // write publisher name in q= params which google developer account has.
+                    uri_coa = Uri.parse("market://search?q=publisher_name");
+                } catch (ActivityNotFoundException e) {
+                    //  if play store is not available on the mobile, than  this link will automatically redirect to default web browser
+                    uri_coa = Uri.parse("http://play.google.com/store/search?q=facebook%20Inc");
+                }
+
+                Intent goToMarket_coa = new Intent(Intent.ACTION_VIEW, uri_coa);
+                startActivity(goToMarket_coa);
                 break;
             case R.id.rate:
                 Uri uri;
